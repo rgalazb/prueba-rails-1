@@ -1,0 +1,7 @@
+<h3> ToDo List</h3>
+
+<% @todos.each do |todo| %>
+  <div class="card card-block bg-faded">
+    <%= todo.description %>
+  </div>
+<% end %>
