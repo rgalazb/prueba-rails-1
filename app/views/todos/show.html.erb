@@ -1,0 +1,13 @@
+
+
+<div class="card card-block bg-faded mt-5">
+  <%= @todo.description %>
+  <%= '-      Estado: ' %>
+  <% if @todo.completed %>
+    <%= 'Completado' %>
+  <% else %>
+    <%= 'No Completado' %>
+  <% end %>
+</div>
+<%= link_to 'Editar', edit_todo_path, class:'btn btn-success btn-sm' %>
+<%= link_to 'Volver', todos_path, class:'btn btn-primary btn-sm' %>

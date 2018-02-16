@@ -1,0 +1,10 @@
+<h3>Editar Todo</h3>
+
+<%= form_with model: @todo, local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, id: :todo_description,class:'from-text' %>
+  </div>
+  <%= f.submit 'Actualizar', class:'btn btn-primary btn-sm' %>
+<% end %>
+<%= link_to 'volver', todos_path, class: 'btn btn-success btn-sm' %>

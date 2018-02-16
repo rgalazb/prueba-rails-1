@@ -1,7 +1,15 @@
 <h3> ToDo List</h3>
-
 <% @todos.each do |todo| %>
-  <div class="card card-block bg-faded">
-    <%= todo.description %>
+
+  <div class="card mt-5" style="width: 18rem;">
+    <div class="card-body">
+      <p class="card-text"><%= todo.description %></p>
+      <%= link_to 'editar', edit_todo_path(todo), class: 'btn btn-success btn-sm' %>
+      <%= link_to 'mostrar', todo_path(todo), class: 'btn btn-info btn-sm' %>
+      <%= link_to 'borrar', delete_todo_path(todo),method: :delete,class:'btn btn-danger btn-sm' %>
+      <% if !todo.completed %>
+        <%= link_to 'completar', complete_todo_path(todo), class: 'btn btn-secondary btn-sm' %>
+      <% end %>
+    </div>
   </div>
 <% end %>
