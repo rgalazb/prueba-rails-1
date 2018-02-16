@@ -18,4 +18,5 @@ Rails.application.routes.draw do
 
   get 'todos/:id/completed', to: 'todos#completed', as: 'complete_todo'
 
+  root 'todos#list'
 end
